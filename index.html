@@ -1,1 +1,65 @@
-"Hello World" 
+<!doctype html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <title>PortBOWLio</title>
+	<link rel="stylesheet" href="styles.css"> <!--------- External Style CSS ---------->
+	
+</head>
+<body>
+
+	<!--------- SideNav But Really just a SideBar, Bar --------------->
+	
+	<div id="Navigation" class="nav-section">
+		
+		<!--- Transformed Font still looks blurry in Chrome, !! Needs a Fix !! --->
+		<div class="nav-bar" style="-webkit-filter: blur(0); transform: perspective(1px) translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d; opacity: 1;">
+		
+			<div class="nav-title-container">
+				<div class="nav-title" style="-webkit-filter: blur(0); opacity: 1; transform: perspective(1px) translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">Steven Li</div>
+				<div class="nav-subtitle" style="-webkit-filter: blur(0); transform: perspective(1px) translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d; opacity: 1;">Developer & Scientist</div>
+			</div>
+		
+		</div>
+		
+	</div>
+	
+	<!--------- Navigation Controls ----------------------------------->
+	
+	
+	
+	<!----------- Content ----------------->
+	
+	<div class="main">
+
+
+	
+	</div>
+	
+    <script src="jquery.js"></script>
+    <script>
+ 
+    $( document ).ready(function() {
+	
+		//To do: Add loading gif, when window is done, set opacity of background to 1. Actually, maybe...
+	
+	
+        $( "class" ).click(function( event ) {
+            alert( "You clicked yourself, now the link is leaving");
+			event.preventDefault();
+			
+			$(this).hide("slow");
+			
+        });
+		
+    });
+	
+	window.onload = function() {
+		console.log("Window has loaded");
+	};
+ 
+    </script>
+	<!--- <iframe src="test.html"></iframe> Another Window within a Within, spooky, not really. -->
+</body>
+</html>
