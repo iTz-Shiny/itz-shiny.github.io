@@ -10,6 +10,16 @@
 </head>
 <body>
 
+	<!-- Overlay -->
+
+	<div id='bg-overlay' style="display: none; position:absolute; background-image: url('overlay_bg.jpg'); background-size: cover; opacity: 0; background-position: center center; width:100%; height:100%; transition-property(visibility,opacity); transition: fadeout 1s ease; transition: visibility 0s 2s, opacity 2s linear;">
+		<div class="gradient-text main" style="display:none; transition: color 200ms ease, padding 200ms ease; padding:40px;" id="overlay">
+			<div><a href="#home"><h1 style="text-align: center;">Home</h1></a></div>
+			<div><a href="#projects"><h1 style="text-align: center;">Projects</h1></a></div>
+			<div><a href="#contact"><h1 style="text-align: center;">Contact</h1></a></div>
+		</div>
+	</div>
+
 	<!--------- SideNav But Really just a SideBar, Bar --------------->
 	
 	<div id="Navigation" class="nav-section">
@@ -25,7 +35,7 @@
 			<!--------- Navigation Controls ----------------------------------->
 			
 			<div class="navigation-bar-controls">
-				<div class="menu-toggle">
+				<div id="nav-menu" class="menu-toggle" onclick="nav_toggle()">
 				
 						<!-- Line Navigation Control -->
 					<div class="menu-toggle-line" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;"></div>
@@ -49,7 +59,6 @@
 		<!------------------------ Nav Menu Overlay --------------------------------------------->
 
 		<div class="menu-overlay">
-
 		</div>
 		
 		<!--------------------------The Slideout Navigation Bar --------------------------------->
@@ -64,11 +73,13 @@
 	<!----------- Content ----------------->
 	
 	<div class="main">
-		<section class="content" style="font-weight: 600;">
+		<!-- <div class="gradient-text" style="display:none; padding:30px;" id="overlay">
+				<div><a href="#home"><h1 style="text-align: left;">Home</h1></a></div>
+				<div><a href="#projects"><h1 style="text-align: left;">Projects</h1></a></div>
+				<div><a href="#contact"><h1 style="text-align: left;">Contact</h1></a></div>
+		</div> -->
+		<section class="content gradient-text" style="font-weight: 600;">
 			<h1 style="text-align: center; text-shadow: 3px 1px 2px ;">It is I, the one and only</h1>
-			<ul style="text-align: center">Center</ul>
-			<ul>Left</ul>
-			<ul style="text-align: right">Right</ul>
 		</section>	
 	</div>
 
@@ -78,10 +89,52 @@
     <script src="jquery.js"></script>
     <script>
  
+    function nav_toggle() {
+	  // document.getElementById("overlay").style.width = "100%";
+	  let base = document.getElementsByTagName("BODY")[0];
+	  let menuDisplay = document.getElementById("bg-overlay");
+	  let menu = document.getElementById("overlay");
+	  let contents = document.getElementsByClassName("content")
+	  if (menuDisplay.style.display == "none") {
+	  	menuDisplay.style.animation = 'fadein 1s';
+	  	menuDisplay.style.display = "block"; 
+	  	menu.style.display = "inline-block"; 	
+	  	for(let i =0; i< contents.length; i++){ //Hide all content
+	  		contents[i].style.display = "none"
+	  	}
+	  	// menuDisplay.style.width = 100%;
+	  	// menuDisplay.style.height = 100%;
+	  	menuDisplay.style.visibility = 'visible';
+	  	menuDisplay.style.opacity = 1;
+	  		// for(let j = 0; j<100; j++){
+	  		// 	menuDisplay.style.opacity+=0.01;
+	  		// 	console.log(j);
+	  		// $( "bg-overlay" ).css( "opacity", i );
+	  	// }
+	  	// $( "body" ).css( "background-image", 'url("overlay_bg.jpg")' );
+	  }
+	  else{
+	  	menuDisplay.style.opacity = 0;
+	  	menuDisplay.style.animation = 'fadeout 1s';
+	  	menuDisplay.style.visibility = 'hidden';
+	  	menu.style.display = "none";
+	  	menuDisplay.style.display = "none";
+	  	// menuDisplay.style.width = 0;
+	  	// menuDisplay.style.height = 0;
+	  	for(let i = 0; i< contents.length; i++){ //Reveal all content
+	  		contents[i].style.display = "flex"
+	  	}
+	  	// $( "body" ).css( "background-image", 'url("bg.jpg")' );
+	  }
+	  
+	  // document.getElementById("overlay").style.position = "fixed";
+	}
+
+
     $( document ).ready(function() {
 	
 		//To do: Add loading gif, when window is done, set opacity of background to 1. Actually, maybe...
-	
+		
 	
         $( "class" ).click(function( event ) {
             alert( "You clicked yourself, now the link is leaving");
