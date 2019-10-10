@@ -12,11 +12,13 @@
 
 	<!-- Overlay -->
 
-	<div id='bg-overlay' style="display: none; position:absolute; background-image: url('overlay_bg.jpg'); background-size: cover; opacity: 0; background-position: center center; width:100%; height:100%; transition-property(visibility,opacity); transition: fadeout 1s ease; transition: visibility 0s 2s, opacity 2s linear;">
-		<div class="gradient-text main" style="display:none; transition: color 200ms ease, padding 200ms ease; padding:40px;" id="overlay">
-			<div><a href="#home"><h1 style="text-align: center;">Home</h1></a></div>
-			<div><a href="#projects"><h1 style="text-align: center;">Projects</h1></a></div>
-			<div><a href="#contact"><h1 style="text-align: center;">Contact</h1></a></div>
+	<div id='bg-overlay'>
+		<div class="gradient-text main" id="overlay">
+			<ul class="no-bullet-ul">
+				<li><a href="#home" class='text-h1 text-white nav-menu-link'><h1 style="margin-left: 0px; text-align: left; /*font-size: 6vw*/;">Home</h1></a></li>
+				<li><a href="#projects" class='text-h1 text-white nav-menu-link'><h1 style="margin-left: 0px; text-align: left; /*font-size: 6vw*/;">Projects</h1></a></li>
+				<li><a href="#contact" class='text-h1 text-white nav-menu-link'><h1 style="margin-left: 0px; text-align: left; /*font-size: 6vw*/;">Contact</h1></a></li>
+			</ul>
 		</div>
 	</div>
 
@@ -25,11 +27,11 @@
 	<div id="Navigation" class="nav-section">
 		
 		<!--- Transformed Font still looks blurry in Chrome, !! Needs a Fix !! --->
-		<div class="nav-bar" style="-webkit-filter: blur(0); transform: perspective(1px) translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d; opacity: 1;">
+		<div class="nav-bar">
 		
 			<div class="nav-title-container">
-				<div class="nav-title" style="-webkit-filter: blur(0); opacity: 1; transform: perspective(1px) translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">Steven Li</div>
-				<div class="nav-subtitle" style="-webkit-filter: blur(0); transform: perspective(1px) translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d; opacity: 1;">Placeholder 87 水</div>
+				<div class="nav-title">Steven Li</div>
+				<div class="nav-subtitle">Placeholder 87 水</div>
 			</div>
 			
 			<!--------- Navigation Controls ----------------------------------->
@@ -38,9 +40,9 @@
 				<div id="nav-menu" class="menu-toggle" onclick="nav_toggle()">
 				
 						<!-- Line Navigation Control -->
-					<div class="menu-toggle-line" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;"></div>
-					<div class="menu-toggle-line" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;"></div>
-					<div class="menu-toggle-line" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;"></div>
+					<div class="menu-toggle-line"></div>
+					<div class="menu-toggle-line"></div>
+					<div class="menu-toggle-line"></div>
 						<!---->
 					
 					<!-- 
@@ -95,17 +97,17 @@
 	  let menuDisplay = document.getElementById("bg-overlay");
 	  let menu = document.getElementById("overlay");
 	  let contents = document.getElementsByClassName("content")
-	  if (menuDisplay.style.display == "none") {
-	  	menuDisplay.style.animation = 'fadein 1s';
+	  if (menuDisplay.style.opacity == 0) {
+	  	menuDisplay.style.animation = 'fadein 2.5s ease';
 	  	menuDisplay.style.display = "block"; 
 	  	menu.style.display = "inline-block"; 	
-	  	for(let i =0; i< contents.length; i++){ //Hide all content
-	  		contents[i].style.display = "none"
-	  	}
 	  	// menuDisplay.style.width = 100%;
 	  	// menuDisplay.style.height = 100%;
-	  	menuDisplay.style.visibility = 'visible';
+	  	// menuDisplay.style.visibility = 'visible';
 	  	menuDisplay.style.opacity = 1;
+	  	// for(let i =0; i< contents.length; i++){ //Hide all content
+	  	// 	contents[i].style.display = "none"
+	  	// }
 	  		// for(let j = 0; j<100; j++){
 	  		// 	menuDisplay.style.opacity+=0.01;
 	  		// 	console.log(j);
@@ -115,15 +117,15 @@
 	  }
 	  else{
 	  	menuDisplay.style.opacity = 0;
-	  	menuDisplay.style.animation = 'fadeout 1s';
-	  	menuDisplay.style.visibility = 'hidden';
-	  	menu.style.display = "none";
-	  	menuDisplay.style.display = "none";
+	  	// menuDisplay.style.animation = 'fadeout 2s ease';
+	  	// menuDisplay.style.visibility = 'hidden';		
+	  	// menu.style.display = "none";
+	  	// menuDisplay.style.display = "none";
 	  	// menuDisplay.style.width = 0;
 	  	// menuDisplay.style.height = 0;
-	  	for(let i = 0; i< contents.length; i++){ //Reveal all content
-	  		contents[i].style.display = "flex"
-	  	}
+	  	// for(let i = 0; i< contents.length; i++){ //Reveal all content
+	  	// 	contents[i].style.display = "flex"
+	  	// }
 	  	// $( "body" ).css( "background-image", 'url("bg.jpg")' );
 	  }
 	  
@@ -135,6 +137,9 @@
 	
 		//To do: Add loading gif, when window is done, set opacity of background to 1. Actually, maybe...
 		
+		// let sound = document.createElement('audio');
+		// sound.setAttribute('src',"surprise.mp3");
+		// sound.play();
 	
         $( "class" ).click(function( event ) {
             alert( "You clicked yourself, now the link is leaving");

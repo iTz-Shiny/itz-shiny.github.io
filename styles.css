@@ -123,6 +123,8 @@ body {
 	margin-left: 45px;
 	margin-right: 5px;
 	padding: 25px;
+	width: 100%;
+	height: 100%;
 }
 
 /*For Mobile - Resize Nav-Section for full width, nav-bar right border is now a bottom border & title-container is no longer vertical*/
@@ -162,6 +164,12 @@ body {
 	.main {
 		margin-left: 5px;
 		margin-top: 5%;
+	}
+	#overlay {
+		margin-top: 70px;
+	}
+	h1 {
+		font-size: 4em;
 	}
 }
 
@@ -223,6 +231,32 @@ body {
 }
 
 
+/*Overlay Background*/
+#bg-overlay {
+	height: 100%;
+	width: 100%;
+	display: block; 
+	position: fixed; 
+	background-image: url('overlay_bg.jpg'); 
+	background-size: cover; 
+	opacity: 0; 
+	background-position: center center; 
+	transition-property(visibility,opacity); 
+	/*transition: fadeout 2s ease; */
+	transition: visibility 0s 2s, opacity 3s ease;
+	overflow: hidden;
+}
+
+#overlay {
+	display:none; 
+	transition: color 200ms ease, padding 200ms ease; 
+	padding: 40px;
+}
+
+.no-bullet-ul {
+	list-style: none;
+}
+
 /*Content*/
 .content {
 	display: flex;
@@ -234,12 +268,11 @@ h1 {
   margin-top: 0px;
   margin-bottom: 10px;
   font-family: 'Gt america compressed', sans-serif;
-  font-size: 12vw;
+  font-size: 15vw;
   line-height: 1em;
   font-weight: 900;
   letter-spacing: -1px;
   text-transform: uppercase;
-
 
 }
 
@@ -258,5 +291,63 @@ a {
 ul {
   margin-top: 0px;
   margin-bottom: 20px;
-  padding-left: 40px;
+  padding-left: 0px;
 }
+
+.text-h1 {
+  font-size: 10px;
+  line-height: 40px;
+}
+
+.text-h1.text-white.nav-menu-link {
+  position: relative;
+  display: block;
+  -webkit-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  -webkit-transition: color 200ms ease, padding 200ms ease;
+  transition: color 200ms ease, padding 200ms ease;
+  font-family: 'Gt america compressed', sans-serif;
+  color: #f1efe0;
+  font-size: 2em;
+  line-height: 0.8em;
+  font-weight: 900;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
+.text-h1.text-white.nav-menu-link:hover {
+  padding-left: 40px;
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  color: #ff4242;
+}
+
+@media (max-width: 479px) {
+  h1 {
+    font-size: 3em;
+  }
+  h2 {
+    font-size: 2.1em;
+  }
+  h3 {
+    font-size: 1em;
+  }
+  h4 {
+    font-size: 1em;
+  }
+  h5 {
+    letter-spacing: 2px;
+  }
+  li {
+    font-size: 0.9em;
+  }
+  .text-h1.text-white.nav-menu-link {
+    display: block;
+    font-size: 4vw;
+  }
+  #overlay {
+	margin-top: 60%;
+  }
