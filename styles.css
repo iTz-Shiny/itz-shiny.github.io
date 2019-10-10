@@ -11,17 +11,18 @@ body {
 	overflow-x: hidden;
 	margin: 0;
 	display: flex;
-	opacity = 1;
+	opacity = 0;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-color: #111;
-	transition: fadein 2s linear;
+	/*transition: fadein 2s ease;*/
 	/*min-height: 100%;*/
-	animation: fadein 2s;
-    -moz-animation: fadein 2s; /* Firefox */
-    -webkit-animation: fadein 2s; /* Safari and Chrome */
-    -o-animation: fadein 2s; /* Opera */
+	animation: fadein 1s ease;
+    -moz-animation: fadein 1s ease; /* Firefox */
+    -webkit-animation: fadein 1s ease; /* Safari and Chrome */
+    -o-animation: fadein 1s ease; /* Opera */
+    overflow-y: hidden;
 }
 
 @keyframes fadein {
@@ -219,6 +220,64 @@ body {
 	margin-top: 7px;
 	margin-bottom: 0px;
 	background-color: #f1efe0;
+	transform: rotate(0deg);
+	transition: all 0.1s linear;
+	-webkit-transition: all 0.5s linear;
+	opacity: 1;
+}
+
+.topBar {
+	transform-origin: bottom left;
+}
+.topBar.trigger {
+	animation: topDown 1s ease forwards;
+}
+.topBar.reverse {
+	animation: topDown 1s ease reverse forwards;
+}
+
+
+.midBar.trigger {
+	animation: fadeout 1s ease forwards;
+}
+.midBar.reverse {
+	animation: fadeout 1s ease reverse forwards;
+}
+
+.bottomBar {
+	transform-origin: top left;
+}
+.bottomBar.trigger {
+	animation: bottomUp 1s ease forwards;
+}
+.bottomBar.reverse {
+	animation: bottomUp 1s ease reverse forwards;
+}
+
+
+
+.retrigger{
+}
+
+
+@keyframes bottomUp {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(-35deg); }
+}
+
+@keyframes bottomUp {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(-35deg); }
+}
+
+@keyframes topDown {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(35deg); }
+}
+
+@-ms-keyframes topDown {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(35deg); }
 }
 
 .arrow-right {
@@ -243,14 +302,16 @@ body {
 	background-position: center center; 
 	transition-property(visibility,opacity); 
 	/*transition: fadeout 2s ease; */
-	transition: visibility 0s 2s, opacity 3s ease;
+	transition: visibility 0s 1s, opacity 1s ease;
 	overflow: hidden;
 }
 
 #overlay {
-	display:none; 
-	transition: color 200ms ease, padding 200ms ease; 
+	display: block; 
+	opacity: 0;
+	transition: visibility 0s 1s, opacity 1s ease;
 	padding: 40px;
+	animation: fadein 2s ease;
 }
 
 .no-bullet-ul {
@@ -268,7 +329,7 @@ h1 {
   margin-top: 0px;
   margin-bottom: 10px;
   font-family: 'Gt america compressed', sans-serif;
-  font-size: 15vw;
+  font-size: 14vw;
   line-height: 1em;
   font-weight: 900;
   letter-spacing: -1px;
@@ -325,6 +386,7 @@ ul {
   color: #ff4242;
 }
 
+/*Mobile*/
 @media (max-width: 479px) {
   h1 {
     font-size: 3em;
