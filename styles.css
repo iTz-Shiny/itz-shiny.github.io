@@ -22,7 +22,14 @@ body {
     -moz-animation: fadein 1s ease; /* Firefox */
     -webkit-animation: fadein 1s ease; /* Safari and Chrome */
     -o-animation: fadein 1s ease; /* Opera */
-    overflow-y: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+}
+
+body::-webkit-scrollbar {
+	width: 0;
+	height: 0;
 }
 
 @keyframes fadein {
@@ -212,6 +219,10 @@ body {
 	cursor: pointer;
   
 }
+.menu-toggle:hover > .menu-toggle-line {
+	margin-top: 6px;
+}
+
 
 .menu-toggle-line {
 	
@@ -307,11 +318,11 @@ body {
 }
 
 #overlay {
-	display: block; 
+	display: none; 
 	opacity: 0;
-	transition: visibility 0s 1s, opacity 1s ease;
+	transition: visibility 0s 1s, opacity 1s linear;
 	padding: 40px;
-	animation: fadein 2s ease;
+	animation: fadein 2s linear;
 }
 
 .no-bullet-ul {

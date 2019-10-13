@@ -128,6 +128,7 @@
 	  	// menuDisplay.style.visibility = 'visible';
 	  	$("#bg-overlay").css('opacity',1);
 	  	$("#overlay").css('opacity',1);
+	  	$('body').css('overflow-y','hidden');
 	  	// menuDisplay.style.opacity = 1;
 	  	// menu.style.opacity = 1;
 	  	// menu.style.z-index = 1;
@@ -143,8 +144,8 @@
 	  }
 	  else{
 	  	$("#overlay").css('opacity',0);
-	  	setTimeout("$('#overlay').css('display','none');",400) //Let animation play first
 	  	$("#bg-overlay").css('opacity',0);
+	  	setTimeout("$('#overlay').css('display','none');",200) //Let animation play first
 	  	// menu.style.opacity = 0;
 	  	// for(n in lines){
 	  	// 	n.removeClass('retrigger');
@@ -152,6 +153,7 @@
 	  	// if($(".menu-toggle-line").hasClass("trigger")){
 	  	// 	$(".menu-toggle-line").removeClass("trigger");
 	  	// }
+	  	$('body').css('overflow-y','visible');
 	  	$(".menu-toggle-line").removeClass("trigger");
 	  	setTimeout("$('.menu-toggle-line').addClass('reverse');",10);
 	  	// lines[0].style.animation = 'topDown 1s ease reverse forwards';
