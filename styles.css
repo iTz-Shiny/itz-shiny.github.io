@@ -216,6 +216,7 @@ body::-webkit-scrollbar {
 	-webkit-flex: 1;
 	-ms-flex: 1;
 	flex: 1;
+	padding: 5px;
 	cursor: pointer;
   
 }
@@ -353,11 +354,24 @@ a {
 }
 
 .gradient-text {
-	/*experimental gradient text*/
-  background: -webkit-linear-gradient(#ffffff, #696969);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 0.25px black;
+	background: #ffffff;
+	background: -moz-linear-gradient(top, #ffffff 0%, #696969 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#696969), color-stop(100%,#111111));
+	background: -webkit-linear-gradient(top, #ffffff 0%,#696969 100%);
+	background: -o-linear-gradient(top, #ffffff 0%,#696969 100%);
+	background: -ms-linear-gradient(top, #ffffff 0%,#696969 100%);
+	background: linear-gradient(to bottom, #ffffff 0%,#696969 100%);
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#696969',GradientType=0 );*/
+
+/*	background: -webkit-linear-gradient(linear, top, bottom,#ffffff, #696969);
+	background: -webkit-gradient(top,#ffffff,#696969);
+	background: -moz-linear-gradient(top,#ffffff,#696969);
+	background: linear-gradient(to bottom, #ffffff,#696969);*/
+
+	color: transparent;
+	-webkit-background-clip: text;
+	/*-webkit-text-fill-color: transparent; <-- Does not work on Chrome, removed otherwise text is hollow in Chrome*/ 
+	-webkit-text-stroke: 0.25px black;
 }
 
 ul {
@@ -381,7 +395,7 @@ ul {
   transition: color 200ms ease, padding 200ms ease;
   font-family: 'Gt america compressed', sans-serif;
   color: #f1efe0;
-  font-size: 2em;
+  font-size: 14vw;
   line-height: 0.8em;
   font-weight: 900;
   letter-spacing: -1px;
@@ -424,3 +438,5 @@ ul {
   #overlay {
 	margin-top: 60%;
   }
+
+/*End*/
