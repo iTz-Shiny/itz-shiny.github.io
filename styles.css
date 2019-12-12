@@ -1,9 +1,13 @@
+html {
+	scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Work Sans', sans-serif;
     color: #f1efe0;
     font-size: 1em;
     line-height: 1.6em;
-	background-image: url("bg.jpg");
+	/*background-image: url("bg.jpg");*/
 	/*width: 100%;*/
 	/*height: 100%;*/
 	/*background-repeat: no-repeat;*/
@@ -15,7 +19,7 @@ body {
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-color: #111;
+	background-color: rgb(0, 0, 0);
 	/*transition: fadein 2s ease;*/
 	/*min-height: 100%;*/
 	animation: fadein 1s ease;
@@ -70,6 +74,131 @@ body::-webkit-scrollbar {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 
+}
+
+/*Flexbox*/
+
+.flex-box-vertical {
+	display:flex;
+	flex-direction: row;
+  	justify-content:space-between;
+  	text-align: center;
+	align-items: center;
+	/*justify-content: center;*/
+}
+
+.flex-box-hortizonal {
+	display:flex;
+	flex-direction: column;
+  	justify-content:space-between;
+}
+
+.flex-box-hortizonal-border {
+	display:flex;
+	flex-direction: column;
+  	justify-content:space-between;
+  	border-left: 1px solid hsla(0, 5%, 90%, 0.2);
+  	padding-left: 1%;
+}
+
+
+/*Paragraph*/
+
+p {
+  margin-bottom: 20px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1em;
+  line-height: 2em;
+}
+
+.course {
+	color: #0080ff;
+}
+
+h3 {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  font-family: 'Gt america extended', sans-serif;
+  font-size: 1.7em;
+  line-height: 1.2em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+h4 {
+  margin-top: -10px;
+  margin-bottom: -11px;
+  font-family: 'Gt america compressed', sans-serif;
+  font-size: 1.4em;
+  line-height: 1.6em;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+h5 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-family: 'Gt america extended', sans-serif;
+  font-size: 1.4em;
+  line-height: 1.2em;
+  font-weight: 400;
+  padding: 1%;
+  /*text-transform: uppercase;*/
+}
+
+.paragraph.large {
+  font-size: 1.4em;
+  font-weight: 100;
+}
+
+.paragraph.large.text-center.text-home-intro {
+  display: block;
+  width: 60%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 0px;
+  padding-bottom: 50px;
+  font-size: 1.5em;
+}
+
+.paragraph.large.project-intro {
+  display: block;
+  width: 50%;
+  max-width: 700px;
+  margin-right: auto;
+  margin-bottom: 120px;
+  margin-left: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/*Paragraph End*/
+
+.container {
+  width: auto;
+  margin-left: 80px;
+  padding-right: 60px;
+  padding-left: 60px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .nav-section {
@@ -135,54 +264,112 @@ body::-webkit-scrollbar {
 	height: 100%;
 }
 
-/*For Mobile - Resize Nav-Section for full width, nav-bar right border is now a bottom border & title-container is no longer vertical*/
-@media screen and (max-width: 700px) { 
-	.nav-section {
-		position: fixed;
-		width: 100%;
-		min-height: unset;
-		height: 65px;
-	}
-	.nav-bar {
+/*Button*/
 
-		margin-top: unset;
-		border-bottom: 1px solid hsla(0, 5%, 10%, 0.2);
-		/*margin-right: 1%;*/
-		/*margin-left: 1%;*/
-		border-right: unset;
-		align-items: end;
-		margin-bottom: unset;
-		padding: 19px 20px;
-		background-color: rgba(50,48,48,0.60); 
-
-	}
-
-	.nav-title-container {
-		transform: unset;
-		margin-top: unset;
-		top: unset;
-		left: 0%;
-	}
-	.navigation-bar-controls {
-		margin-top: -3px;
-	}
-	.nav-title {
-		margin-top: -4px;
-	}
-	.main {
-		margin-left: 5px;
-		margin-top: 5%;
-	}
-	#overlay {
-		margin-top: 70px;
-	}
-	h1 {
-		font-size: 4em;
-	}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 1%;
+  z-index: 100;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-radius: 25px;
 }
 
+.side-buttons {
+	display: block;
+}
 
+#myBtn:hover {
+  background-color: #d3d3d3; 
+}
 
+.project-button {
+	margin-right: 1%;
+	float: left;
+	font-size: 0.8em;
+	line-height: 1.2em;
+}
+
+.cta-button {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: block ruby;
+}
+
+.button {
+  display: inline-block;
+  padding: 0px 20px;
+  margin-bottom: 2%;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid #222;
+  background-color: transparent;
+  -webkit-transition: background-color 200ms ease, color 200ms ease;
+  transition: background-color 200ms ease, color 200ms ease;
+  font-family: 'Gt america compressed', sans-serif;
+  color: #222;
+  font-size: 1.2em;
+  line-height: 2.0em;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.button.project {
+	margin-right: 10px;
+	font-size: 0.7em;
+	line-height: 1.2em
+}
+
+.button:hover {
+  color: #f1efe0;
+}
+
+.button.navigation-button {
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.button.button-light {
+  border-color: #f1efe0;
+  color: #f1efe0;
+}
+
+.button.button-light:hover {
+  border-color: #a9a9a9;
+  background-color: #a9a9a9;
+  color: #f1efe0;
+}
+
+.button.button-light.cta-postition {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: none;
+}
+
+.button.button-light.cta-postition.desktop {
+  position: relative;
+  z-index: 10;
+  display: block;
+}
+
+.button.button-light.paginate {
+  margin-top: 60px;
+}
+
+.button.cta-button {
+  margin-top: 20px;
+}
 
 .navigation-bar-controls {
 	display: -webkit-box;
@@ -306,7 +493,7 @@ body::-webkit-scrollbar {
 #bg-overlay {
 	height: 100%;
 	width: 100%;
-	display: block; 
+	display: none; 
 	position: fixed; 
 	background-image: url('overlay_bg.jpg'); 
 	background-size: cover; 
@@ -316,6 +503,7 @@ body::-webkit-scrollbar {
 	/*transition: fadeout 2s ease; */
 	transition: visibility 0s 1s, opacity 1s ease;
 	overflow: hidden;
+	z-index: 69;
 }
 
 #overlay {
@@ -332,8 +520,8 @@ body::-webkit-scrollbar {
 
 /*Content*/
 .content {
-	display: flex;
 	padding: 30px;
+	padding-left: 80px;
 	/*text-align: center;*/
 }
 
@@ -341,12 +529,13 @@ h1 {
   margin-top: 0px;
   margin-bottom: 10px;
   font-family: 'Gt america compressed', sans-serif;
-  font-size: 14vw;
+  font-size: 12vw;
   line-height: 1em;
   font-weight: 900;
   letter-spacing: -1px;
   text-transform: uppercase;
-
+  display: flex;
+  text-align: center;
 }
 
 a {
@@ -354,6 +543,7 @@ a {
 }
 
 .gradient-text {
+	display: flex;
 	background: #ffffff;
 	background: -moz-linear-gradient(top, #ffffff 0%, #696969 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#696969), color-stop(100%,#111111));
@@ -372,12 +562,26 @@ a {
 	-webkit-background-clip: text;
 	/*-webkit-text-fill-color: transparent; <-- Does not work on Chrome, removed otherwise text is hollow in Chrome*/ 
 	-webkit-text-stroke: 0.25px black;
+
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
 }
 
 ul {
   margin-top: 0px;
   margin-bottom: 20px;
   padding-left: 0px;
+}
+
+li {
+  /*margin-bottom: 10px;*/
+  font-family: 'Gt america extended', sans-serif;
+  font-size: 1.3em;
+  line-height: 1.6em;
+  overflow: auto;
 }
 
 .text-h1 {
@@ -387,7 +591,7 @@ ul {
 
 .text-h1.text-white.nav-menu-link {
   position: relative;
-  display: block;
+  display: inline;
   -webkit-transform: translate(0px, 0px);
   -ms-transform: translate(0px, 0px);
   transform: translate(0px, 0px);
@@ -395,7 +599,7 @@ ul {
   transition: color 200ms ease, padding 200ms ease;
   font-family: 'Gt america compressed', sans-serif;
   color: #f1efe0;
-  font-size: 14vw;
+  font-size: 12vw;
   line-height: 0.8em;
   font-weight: 900;
   letter-spacing: -1px;
@@ -411,32 +615,162 @@ ul {
   color: #ff4242;
 }
 
-/*Mobile*/
+/*Project List*/
+
+.collection-list {
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.2);
+}
+
+.project-list-item {
+  margin-left: 60px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-top: 1px solid hsla(0, 0%, 100%, 0.2);
+  color: #f1efe0;
+}
+
+.project-list-name {
+  width: 50%;
+  margin-bottom: 0px;
+  font-size: 1.3em;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.project-list-meta {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  margin-left: 80px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.client-list-meta-item {
+  width: 50%;
+  padding-right: 40px;
+  font-size: 0.9em;
+}
+
+/* ------------------ Responsive Re-sizing ------------------*/  
+
+@media screen and (max-width: 700px) { 
+
+	.content {
+		padding: 30px;
+	}
+
+	.nav-section {
+		position: fixed;
+		width: 100%;
+		min-height: unset;
+		height: 65px;
+	}
+	.nav-bar {
+
+		margin-top: unset;
+		border-bottom: 1px solid hsla(0, 5%, 10%, 0.2);
+		/*margin-right: 1%;*/
+		/*margin-left: 1%;*/
+		border-right: unset;
+		align-items: end;
+		margin-bottom: unset;
+		padding: 19px 20px;
+		background-color: rgba(50,48,48,0.60); 
+
+	}
+
+	.nav-title-container {
+		transform: unset;
+		margin-top: unset;
+		top: unset;
+		left: 0%;
+	}
+	.navigation-bar-controls {
+		margin-top: -3px;
+	}
+	.nav-title {
+		margin-top: -4px;
+	}
+	.main {
+		margin-left: 5px;
+		margin-top: 5%;
+	}
+	#overlay {
+		margin-top: 70px;
+	}
+	h1 {
+		font-size: 4em;
+	}
+	.button {
+		font-size: 1.1em;
+	}
+	.button.button-light.cta-postition {
+		position: absolute;
+		top: 17px;
+		right: 70px;
+		display: block;
+	}
+ 	.button.button-light.cta-postition.desktop{
+ 		display: none;
+ 	}
+
+ 	.flex-box-vertical {
+ 		flex-direction: column;
+	}
+
+ 	.flex-box-hortizonal-border {
+ 		display: block;
+ 		border-left: unset;
+ 		border-top: 1px solid hsla(0, 5%, 90%, 0.2);
+  		padding-left: unset;
+  		padding-top: 2%;
+	}
+
+}
+
 @media (max-width: 479px) {
-  h1 {
-    font-size: 3em;
-  }
-  h2 {
-    font-size: 2.1em;
-  }
-  h3 {
-    font-size: 1em;
-  }
-  h4 {
-    font-size: 1em;
-  }
-  h5 {
-    letter-spacing: 2px;
-  }
-  li {
-    font-size: 0.9em;
-  }
-  .text-h1.text-white.nav-menu-link {
-    display: block;
-    font-size: 4vw;
-  }
-  #overlay {
-	margin-top: 60%;
-  }
+	h1 {
+		font-size: 3em;
+	}
+	h2 {
+		font-size: 2.1em;
+	}
+	h3 {
+		font-size: 1em;
+	}
+	h4 {
+		font-size: 1em;
+	}
+	h5 {
+		letter-spacing: 2px;
+	}
+	li {
+		font-size: 0.9em;
+	}
+	.text-h1.text-white.nav-menu-link {
+		display: block;
+	/*font-size: 4vw;*/
+	}
+	#overlay {
+		margin-top: 60%;
+	}
+
+}
+
+
 
 /*End*/

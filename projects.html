@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang = "en">
+<head>
+
+    <meta charset="utf-8">
+    <title>Steven Li</title>
+	<link rel="stylesheet" href="styles.css"> <!--------- External Style CSS ---------->
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+
+	<script type="text/javascript" src="template.js"></script>
+
+	<div class="main">
+
+		<section class="content" style="font-weight: 600;">
+			<h1>Projects</h1>
+		</section>	
+
+		<!-- Project Section -->
+
+
+		<ul class="content no-bullet-ul">
+			<hr>
+			<li>
+				<div class='flex-box-vertical'>
+					<h5>Machine Learning Classification of Foreground Dwarfs and Background Giants in the Perseus Cluster</h5>
+					<div id="projects" class='flex-box-hortizonal-border'>
+						<a href="https://github.com/danrachou/Perseus-vs-background" target="_blank" class="button project-button button-light">Github</a>
+						<a href="https://nbviewer.jupyter.org/github/danrachou/Perseus-vs-background/blob/master/final-report.pdf" target="_blank" class="button project-button button-light">Paper</a>
+						<a href="https://nbviewer.jupyter.org/github/danrachou/Perseus-vs-background/blob/master/presentation.pdf" target="_blank" class="button project-button button-light">Presentation</a>
+					</div>
+				</div>
+			</li>
+
+			<hr>
+			<li>
+				<div class='flex-box-vertical'>
+				<h5>Exhaustive Algorithm Approach to tRNA Secondary Structure Prediction</h5>
+				<div id="projects" class='flex-box-hortizonal-border'>
+						<a href="https://bit.ly/tRNApredict" target="_blank" class="button project-button button-light">Website</a>
+						<a href="project_files/Bioinformatics_Project.pdf" target="_blank" class="button project-button button-light">Paper</a>
+					</div>
+				</div>
+			</li>
+
+			<hr>
+			<li>
+				<div class='flex-box-vertical'>
+				<h5>Paper Warriors</h5>
+				<div id="projects" class='flex-box-hortizonal-border'>
+						<a href="https://svfc108.itch.io/paper-warriors" target="_blank" class="button project-button button-light">Game</a>
+						<a href="https://github.com/fonicartist/paperwarriors" target="_blank" class="button project-button button-light">Github</a>
+					</div>
+				</div>
+			</li>
+
+			<hr>
+			<li>
+				<div class='flex-box-vertical'>
+				<h5>Grapple Jump</h5>
+				<div id="projects" class='flex-box-hortizonal-border'>
+						<a href="https://drive.google.com/drive/folders/1D0Fa35rha1clzwKf9pDWnRflGxT3qk5L?usp=sharing" target="_blank" class="button project-button button-light">Game</a>
+						<a href="https://github.com/iTz-Shiny/grapple-jump" target="_blank" class="button project-button button-light">Github</a>
+					</div>
+				</div>
+			</li>
+
+			<hr>
+			<li>
+				<div class='flex-box-vertical'>
+				<h5>Ultrasonic Thermometer Proof of Concept & Performance Benchmark</h5>
+				<div id="projects" class='flex-box-hortizonal-border'>
+						<a href="project_files/Accuracy_and_Precision_of_a_homemade_Ultrasonic_Thermometer_compared_to_a_Infrared_and_Liquid_in_Glass_Thermometers.pdf" target="_blank" class="button project-button button-light">Paper</a>
+					</div>
+				</div>
+			</li>
+
+			<hr>
+			<li>
+				<div class='flex-box-vertical'>
+				<h5>Analysis of Hydrophobic Coating on Absorbent Fabrics</h5>
+				<div id="projects" class='flex-box-hortizonal-border'>
+						<a href="project_files/Wetting_of_Hydrophobic_Coated_Fabric.pdf" target="_blank" class="button project-button button-light">Paper</a>
+					</div>
+				</div>
+			</li>
+
+			<hr>
+			<li>
+				<div class='flex-box-vertical'>
+				<h5>Sun’s Evolutionary Process into a Red Giant Simulation</h5>
+				<div id="projects" class='flex-box-hortizonal-border'>
+						<a href="https://github.com/iTz-Shiny/Final-Project" target="_blank" class="button project-button button-light">Github</a>
+						<a href="https://github.com/iTz-Shiny/Final-Project/blob/master/Stimulation_of_Stellar_Evolution_of_the_Sun(2).pdf" target="_blank" class="button project-button button-light">Paper</a>
+					</div>
+				</div>
+			</li>
+
+		</ul>
+
+		<!-- <section>
+
+		<div class="content project-list-item w-inline-block">
+			<h3 class="project-list-name">ABC</h3>
+			<a href="resume/Steven_Li_Resume_Latest.pdf" target="_blank" class="button project button-light">Resume</a>
+			<a href="resume/Steven_Li_Resume_Latest.pdf" target="_blank" class="button project button-light">Resume</a>
+		</div>
+
+		</section> -->
+
+	</div>
+
+	<!-- Back-To-Top Button -->
+	<button onclick="topFunction()" id="myBtn"><img src="back-to-top-arrow-2.png" height="50" width="50"></img></button> 
+
+	<!--====== Javascripts & Jquery ======-->
+	
+	<script>
+		var mybutton = document.getElementById("myBtn");
+
+		window.onscroll = function() {scrollFunction()};
+
+		var height = 20;
+
+		function scrollFunction() {
+		  if (document.body.scrollTop > height || document.documentElement.scrollTop > height) {
+		    mybutton.style.display = "block";
+		  } else {
+		    mybutton.style.display = "none";
+		  }
+		}
+
+		function topFunction() {
+		  document.body.scrollTop = 0;
+		  document.documentElement.scrollTop = 0;
+		}
+	</script>
+
+</body>
+</html>

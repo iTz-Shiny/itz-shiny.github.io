@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang = "en">
+<head>
+
+    <meta charset="utf-8">
+    <title>Steven Li</title>
+	<link rel="stylesheet" href="styles.css"> <!--------- External Style CSS ---------->
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+
+<script type="text/javascript" src="template.js"></script>
+
+<div class="main">
+		<!-- <div class="gradient-text" style="display:none; padding:30px;" id="overlay">
+				<div><a href="#home"><h1 style="text-align: left;">Home</h1></a></div>
+				<div><a href="#projects"><h1 style="text-align: left;">Projects</h1></a></div>
+				<div><a href="#contact"><h1 style="text-align: left;">Contact</h1></a></div>
+		</div> -->
+		<section class="content" style="font-weight: 600;">
+			<h1>Academics</h1>
+		</section>	
+
+		<ul class="content no-bullet-ul">
+			<hr>
+			<center><h4>Astronomy</h4></center>
+			<hr>
+			<li><span class="course">SJSU - ASTR 101:</span> Modern Astronomy</li>
+			<li><span class="course">SJSU - ASTR 155:</span> Topics in Modern Astrophysics: Dark Matter</li>
+			<hr>
+			<center><h4>Computer Science</h4></center>
+			<hr>
+			<li><span class="course">BerkeleyX - Data8.2x:</span> Foundations of Data Science: Inferential Thinking by Resampling</li>
+			<li><span class="course">BerkeleyX - Data8.1x:</span> Foundations of Data Science: Computational Thinking with Python</li>
+			<li><span class="course">BerkeleyX - CS198.1x:</span> Bitcoin and Cryptocurrencies</li>
+			<li><span class="course">HarvardX - CS50G:</span> CS50's Introduction to Game Development</li>
+			<!-- <li>HarvardX - CS50M: CS50's Introduction to Computer Science</li> -->
+			<li><span class="course">HarvardX - CS50W:</span> CS50's Web Programming with Python and JavaScript</li>
+			<li><span class="course">HarvardX - CS50:</span> CS50's Introduction to Computer Science</li>
+			<li><span class="course">MITx - 6.00.1x:</span> Introduction to Computer Science and Programming Using Python</li>
+			<li><span class="course">SJSU - CS 108:</span> Introduction to Game Studies</li>
+			<li><span class="course">SJSU - CS 123A:</span> Bioinformatics I</li>
+			<li><span class="course">SJSU - CS 151:</span> Object-Oriented Design</li>
+			<li><span class="course">SJSU - CS 146:</span> Data Structures & Algorithms</li>
+			<li><span class="course">SJSU - CS 154:</span> Formal Language & Computability</li>
+			<li><span class="course">SJSU - CS 46A:</span> Introduction to Programming</li>
+			<li><span class="course">SJSU - CS 46B:</span> Introduction to Data Structures</li>
+			<hr>
+			<center><h4>Mathematics</h4></center>
+			<hr>
+			<li><span class="course">SJSU - MATH 123:</span> Differential Equations and Linear Algebra</li>
+			<li><span class="course">SJSU - MATH 42:</span> Discrete Math</li>
+			<hr>
+			<center><h4>Physics</h4></center>
+			<hr>
+			<li><span class="course">SJSU - PHYS 184:</span> Entrepreneurship for Physic Majors</li>
+			<li><span class="course">SJSU - PHYS 160:</span> Thermodynamics and Statistical Physics</li>
+			<li><span class="course">SJSU - PHYS 158:</span> Modern Optics</li>
+			<li><span class="course">SJSU - PHYS 140:</span> Computational Methods in Physics</li>
+			<li><span class="course">SJSU - PHYS 130:</span> Mathematical Methods in Physics</li>
+			<li><span class="course">SJSU - PHYS 122:</span> Modern Physics</li>
+			<li><span class="course">SJSU - PHYS 120A:</span> Electronics, Data Acquisition & Analysis</li>
+			<li><span class="course">SJSU - PHYS 110A:</span> Electricity and Magnetism I</li>
+			<li><span class="course">SJSU - PHYS 107:</span> Waves and Oscillations</li>
+			<li><span class="course">SJSU - PHYS 105A:</span> Advanced Mechanics I</li>
+			<li><span class="course">SJSU - PHYS 100W:</span> Methods of Research and Communication in Physics</li>
+			<li><span class="course">SJSU - PHYS 50/51/52:</span> General Physics Mechanics, Electricity and Magnetism, & Waves, Light, Heat</li>
+		</ul>
+
+	</div>
+
+	<!-- Back-To-Top Button -->
+	<button onclick="topFunction()" id="myBtn"><img src="back-to-top-arrow-2.png" height="50" width="50"></img></button> 
+
+	<!--====== Javascripts & Jquery ======-->
+	
+	<script>
+		var mybutton = document.getElementById("myBtn");
+
+		window.onscroll = function() {scrollFunction()};
+
+		var height = 20;
+
+		function scrollFunction() {
+		  if (document.body.scrollTop > height || document.documentElement.scrollTop > height) {
+		    mybutton.style.display = "block";
+		  } else {
+		    mybutton.style.display = "none";
+		  }
+		}
+
+		function topFunction() {
+		  document.body.scrollTop = 0;
+		  document.documentElement.scrollTop = 0;
+		}
+	</script>
+
+</body>
+</html>
