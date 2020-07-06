@@ -82,7 +82,7 @@ body::-webkit-scrollbar {
 	display:flex;
 	flex-direction: row;
   	justify-content:space-between;
-  	text-align: center;
+  	/*text-align: center;*/
 	align-items: center;
 	/*justify-content: center;*/
 }
