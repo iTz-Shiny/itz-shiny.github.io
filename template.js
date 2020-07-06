@@ -6,7 +6,7 @@ document.write(`
 	<!------------------------ Top Right Buttons --------------------------------------------->
 
 	<div id="back-to-top" class="cta-button">
-		<a href="Steven-Li-CV-July-2020" target="_blank" class="button button-light cta-postition desktop w-button">CV</a>
+		<a href="resume/Steven-Li-CV-July-2020" target="_blank" class="button button-light cta-postition desktop w-button">CV</a>
 		<a href="resume/Steven_Li_Resume_Dec_2019.pdf" target="_blank" class="button button-light cta-postition desktop w-button">Resume</a>
 
 	</div>
